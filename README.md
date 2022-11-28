@@ -1,7 +1,5 @@
 # Relying Party Server
 
-Deliver Apple Passkey solutions to your users.
-
 ## Overview
 
 The relying-party-server is the server-side implementation to support WebAuthn solutions with IBM Security Verify.  In addition, the relying-party-server exposes endpoints that proxy requests to IBM Security Verify OAuth token services.
