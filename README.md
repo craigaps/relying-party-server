@@ -36,6 +36,9 @@ This is a string to represent the JSON for Apple to establish a secure associati
 }
 ```
 
+> The JSON content should be minified when assigning to the environment variable.
+
+
 See [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains) for more information.
 
 #### `FIDO2_RELYING_PARTY_ID`
