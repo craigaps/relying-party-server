@@ -49,7 +49,7 @@ This is the unique identifier (UUID) that is created when the FIDO2 service is c
 
 This is the unique client identifier and confidential client secret that the relying party server uses internally to establlished an authenticated session with the FIDO2 and factors endpoints.
 
-See [FIDO2](hhttps://docs.verify.ibm.com/verify/docs/fido2-login) for more information.
+See [FIDO2](https://docs.verify.ibm.com/verify/docs/fido2-login) for more information.
 
 #### `AUTH_CLIENT_ID` and `AUTH_CLIENT_SECRET`
 
