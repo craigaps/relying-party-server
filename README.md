@@ -51,6 +51,8 @@ This is the unique identifier (UUID) that is created when the FIDO2 service is c
 634cd513-dc6a-5e28-06fg-40c3dc81a79e
 ```
 
+See [Retrieve the list of relying party configurations](https://docs.verify.ibm.com/verify/reference/list_3-2) for more information.
+
 #### `API_CLIENT_ID` and `API_CLIENT_SECRET`
 
 This is the unique client identifier and confidential client secret that the relying party server uses internally to establlished an authenticated session with the FIDO2 and factors endpoints.
@@ -228,3 +230,5 @@ If successful, the response format is as follows:
     "expires_in": 604800
 }
 ```
+
+The `access_token` can be used to make requests to other endpoints extended from the relying party server.
