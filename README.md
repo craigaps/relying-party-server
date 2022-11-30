@@ -231,4 +231,4 @@ If successful, the response format is as follows:
 }
 ```
 
-The `access_token` can be used to make requests to other endpoints extended from the relying party server.
+The `access_token` can be used to make requests to other custom endpoints extended from the relying party server.
