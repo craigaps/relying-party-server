@@ -61,10 +61,14 @@ struct FIDO2Verification: Content, Validatable {
     /// The base64Url-encoded bytes of the signature of the challenge data that was produced by the authenticator.
     let signature: String
 
+    /// The userId provided when creating this credential.
+    let userHandle: String
+    
     static func validations(_ validations: inout Validations) {
         validations.add("clientDataJSON", as: String.self,  is: !.empty)
         validations.add("authenticatorData", as: String.self, is: !.empty)
         validations.add("signature", as: String.self, is: !.empty)
         validations.add("credentialId", as: String.self, is: !.empty)
+        validations.add("userHandle", as: String.self, is: !.empty)
     }
 }

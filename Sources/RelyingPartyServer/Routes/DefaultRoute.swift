@@ -262,7 +262,8 @@ struct DefaultRoute: RouteCollection {
     ///    "clientDataJSON": "eyUyBg8Li8GH...",
     ///    "authenticatorData": "o2M884Yt0a3B7...",
     ///    "credentialId": "VGhpcyBpcyBh...",
-    ///    "signature": "OP84jBpcyB...
+    ///    "signature": "OP84jBpcyB...",
+    ///    "userHandle": "a1b2c3d4"
     /// }
     func signin(_ req: Request) async throws -> Token {
         // Validate the request data.
@@ -270,7 +271,7 @@ struct DefaultRoute: RouteCollection {
         let verification = try req.content.decode(FIDO2Verification.self)
         
         do {
-            let result = try await webAuthnService.verifyCredentail(token: try await token, clientDataJSON: verification.clientDataJSON, authenticatorData: verification.authenticatorData, credentialId: verification.credentialId, signature: verification.signature)
+            let result = try await webAuthnService.verifyCredentail(token: try await token, clientDataJSON: verification.clientDataJSON, authenticatorData: verification.authenticatorData, credentialId: verification.credentialId, signature: verification.signature, userHandle: verification.userHandle)
             
             
             print(String(decoding: result, as: UTF8.self))

@@ -64,7 +64,8 @@ class WebAuthnService {
     ///   - authenticatorData: Information about the authentication that was produced by the authenticator and verified by the signature.
     ///   - credentialId: The credential identifier that is received from the WebAuthn client.
     ///   - signature: The base64Url-encoded bytes of the signature of the challenge data that was produced by the authenticator.
-    func verifyCredentail(token: Token, clientDataJSON: String, authenticatorData: String, credentialId: String, signature: String) async throws -> Data {
+    ///   - userHandle: The userId provided when creating this credential.
+    func verifyCredentail(token: Token, clientDataJSON: String, authenticatorData: String, credentialId: String, signature: String, userHandle: String) async throws -> Data {
         var request = HTTPClientRequest(url: self.baseURL.absoluteString + "/assertion/result?returnJwt=true")
         request.headers.add(name: "content-type", value: "application/json")
         request.headers.add(name: "accept", value: "application/json")
@@ -78,7 +79,8 @@ class WebAuthnService {
                "response": {
                    "clientDataJSON": "\(clientDataJSON)",
                    "authenticatorData": "\(authenticatorData)",
-                   "signature": "\(signature)"
+                   "signature": "\(signature)",
+                   "userHandle": "\(userHandle)"
                }
             }
         """))
