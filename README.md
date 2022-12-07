@@ -81,7 +81,7 @@ Returns the JSON content representing the `APPLE_APP_SITE_ASSOC` environment var
 
 #### `POST /v1/authenticate`
 
-Used for existing accounts with a password resulting in an ROPC request to token endpoint.  Below is a sample request payload:
+Used when the user has an existing account with a password executing an ROPC request to token endpoint.  Below is a sample request payload:
 
 ```
 {
@@ -164,7 +164,7 @@ If successful, the response status a `201 Created`.
 
 #### `POST /v1/challenge`
 
-Generates a new challenge for perform WebAuthn  registrations and verifications.  
+Generates a new challenge to perform a WebAuthn registrations or verifications.  
 
 **Verification (assertion)**
 
@@ -185,7 +185,7 @@ If successful, the response format is as follows:
 
 **Registration (attestation)**
 
-Below is a sample request payload for a attestation:
+Below is a sample request payload for an attestation:
 
 ```
 {
