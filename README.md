@@ -1,12 +1,15 @@
-# Relying Party Server
+# IBM Security Verify Relying Party Server for Swift
 
-## Overview
 
-The relying-party-server is the server-side implementation to support WebAuthn solutions with IBM Security Verify.  In addition, the relying-party-server exposes endpoints that proxy requests to IBM Security Verify OAuth token services.
+The Relying Party Server for Swift is based on the [Vapor](https://vapor.codes) framework and is the server-side implementation to support WebAuthn solutions with IBM Security Verify.  In addition, the Relying Party Server exposes endpoints to proxy requests to IBM Security Verify OAuth token services.
 
 ### Getting started
 
-Create a free trial tenant here: https://www.ibm.com/account/reg/us-en/signup?formid=urx-30041. 
+The resource links in the prerequisites explain and demonstrate how you create a new tenant application configured with Relying Party Server capabilities.
+
+### Prerequisites
+
+- Create a free trial tenant here: https://www.ibm.com/account/reg/us-en/signup?formid=urx-30041. 
 
 You'll need to have an IBMid but this can be done at the same time.  
 
@@ -17,7 +20,7 @@ This link explains setting up your tenant: https://docs.verify.ibm.com/verify/do
 git clone https://github.com/craigaps/relying-party-server.git
 ```
 
-## Contents
+## Configuring the server
 
 ### Environment variables
 The relying-party-server requires a number of environment variables to launch.
@@ -232,3 +235,9 @@ If successful, the response format is as follows:
 ```
 
 The `access_token` can be used to make requests to other custom endpoints in the relying party server project.
+
+## Deploying the server
+Vapor supports a number of deployment options.  The relying-party-server includes a `dockerfile` to build an image via `docker-compose build`.  For alternate hosting, refer to the [Vapor Docs](https://docs.vapor.codes/deploy/docker/)
+
+## License
+This package contains code licensed under the MIT License (the "License"). You may view the License in the LICENSE file within this package.

@@ -1,3 +1,5 @@
+# Copyright contributors to the IBM Security Verify Relying Party Server for Swift project
+#
 # Docker Compose file for Vapor
 #
 # Install Docker on your system to run and test

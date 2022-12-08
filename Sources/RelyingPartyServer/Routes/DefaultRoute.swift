@@ -1,7 +1,6 @@
 //
-//  DefaultRoute.swift
+// Copyright contributors to the IBM Security Verify Relying Party Server for Swift project
 //  
-
 
 import Vapor
 
@@ -49,6 +48,11 @@ struct DefaultRoute: RouteCollection {
     }
     
     func boot(routes: RoutesBuilder) throws {
+        // Returns a simply string to indicate the relying party is running.
+        app.routes.get { _ in
+            return "Welcome to IBM Security Verify Relying Party Server for Swift"
+        }
+        
         let route = routes.grouped("v1")
         // Used for existing accounts with a password resulting in an ROPC to token endpoint.
         route.post("authenticate", use: authenticate)

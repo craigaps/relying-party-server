@@ -1,3 +1,5 @@
+# Copyright contributors to the IBM Security Verify Relying Party Server for Swift project
+
 # ================================
 # Build image
 # ================================
